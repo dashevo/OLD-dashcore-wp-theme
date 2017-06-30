@@ -1,0 +1,13 @@
+{
+	"authors": [
+		{
+			"name": "Joshua Seigler",
+			"email": "joshua@dash.org",
+			"homepage": "https://wp-blog.dash.org/"
+		}
+	],
+	"require": {
+		"timber/timber":"1.*",
+		"Upstatement/routes": "*"
+	}
+}
