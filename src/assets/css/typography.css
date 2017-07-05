@@ -1,0 +1,14 @@
+/* import font definition CSS */
+@import 'fonts/gunshipital/_regular.css';
+@import 'fonts/montserrat/_medium.css';
+@import 'fonts/montserrat/_regular.css';
+@import 'fonts/montserrat/_light.css';
+@import 'fonts/montserrat/_extralight.css';
+
+$font-family-body: 'Montserrat', Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+$font-family-heading: $font-family-body;
+$font-family-brand: 'Gunship Italic', sans-serif;
+
+body {
+  font-family: $font-family-body;
+}
