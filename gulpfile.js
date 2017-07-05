@@ -210,9 +210,9 @@ function styles() {
         this.emit('end');
       })
     )
+    .pipe(changed(base.theme + dest.styles))
     .pipe(concat('main.css'))
     .pipe(sourcemaps.init())
-    .pipe(changed(base.theme + dest.styles))
     .pipe(gulp.dest(base.theme + dest.styles))
     .pipe(browserSync.stream({match: '**/*.css'}))
     .pipe(cssnano())
