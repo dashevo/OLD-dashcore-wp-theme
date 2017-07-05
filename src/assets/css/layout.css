@@ -1,0 +1,10 @@
+@define-mixin content-width {
+  max-width: 860px;
+  padding: 0 20px;
+}
+
+.teaser {
+  &__body {
+    @mixin content-width;
+  }
+}
