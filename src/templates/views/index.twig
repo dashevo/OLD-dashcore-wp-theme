@@ -6,7 +6,7 @@
       <article block="teaser">
         <h1 elem="title"><a href="{{ post.link }}">{{ post.title }}</a></h1>
         <div elem="body">
-          {{ post.content }}
+          {{ post.get_preview(20, false, "") }}
         </div>
       </article>
     {% endfor %}
