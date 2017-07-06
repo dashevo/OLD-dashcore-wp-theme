@@ -16,3 +16,7 @@ body {
   font-weight: 300;
   font-smoothing: antialiased;
 }
+
+h1, h2 {
+  font-weight: 200;
+}
