@@ -1,0 +1,18 @@
+.btn {
+  border-radius: 0.2rem;
+  padding: 0.5rem 0.8rem 0.3rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 1rem;
+  background-color: #1c75bc;
+  color: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.08), 0px 4px 6px 0px rgba(49,49,93,0.13);
+  transition: all .2s ease;
+
+  &--white-solid {
+    color: $color-text;
+    background-color: white;
+  }
+}

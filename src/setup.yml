@@ -1,0 +1,26 @@
+# Fabrica Dev Kit setup configuration
+# Modify for your project, then run `./setup.rb` from this folder
+
+# Project settings
+slug: dashwpblog # lowercase letters only (also used for theme slug and PHP namespacing)
+title: The Digital Cash Blog
+author:
+  name: Dash Team
+  email: contact@dash.org
+  url: https://wp-blog.dash.org/
+
+# WordPress settings
+wp:
+  admin: # development site admin user credentials
+    user: localadmin
+    pass: localadmin
+    email: nobody@dash.org
+  lang: en_US # dev site WP locale/language
+  rewrite_structure: /%postname%/ # dev site permalink structure (can be changed later)
+  # acf_pro_key: # optional (if set will preinstall Advanced Custom Fields Pro)
+  plugins: # optional (installs plugins at setup - use URL slugs from WP plugins directory)
+  # - advanced-custom-fields
+  # - force-regenerate-thumbnails
+
+# Google Analytics - optional (will preset tracking code in theme, can be added manually later)
+# google_analytics_id:

@@ -6,10 +6,22 @@
   display: none !important;
 }
 
-.ir {
+/* ==========================================================================
+   Mixins for frequently used rules
+   ========================================================================== */
+
+@define-mixin hidden-text {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+}
+
+@define-mixin cover {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
 }
 
 /* ==========================================================================

@@ -9,26 +9,15 @@
   position: relative;
   overflow: hidden;
   color: white;
-
-  a {
-    color: inherit;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(-225deg, rgba(40,61,129,0.7) 0%, rgba(28,117,188,0.8) 100%);
-    z-index: -1;
-  }
+  background-image: linear-gradient(-225deg, rgba(40,61,129,0.7) 0%, rgba(28,117,188,0.8) 100%), url('../img/blog-hero-banner.jpg');
+  background-position: center;
+  background-size: cover;
+  padding-top: 2rem;
 
   &::after {
     content: '';
     display: block;
-    padding-top: 8.72%; /* sine of 5 degrees */
+    padding-top: 8.72%; /* sine of 5 degrees, percent of container width */
     transform: skewY(-5deg);
     transform-origin: 100% 0;
     background: white;
@@ -36,6 +25,13 @@
 
   &__content {
     @mixin content-width;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.2);
+  }
+
+  &__title {
+    font-size: 4.11765rem;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
   }
 }
 
@@ -44,10 +40,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   &__menuList {
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  &__menuItem > a, &__logo {
+    color: inherit;
   }
 }
 
