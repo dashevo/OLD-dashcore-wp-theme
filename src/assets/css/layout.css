@@ -13,6 +13,7 @@
   background-position: center;
   background-size: cover;
   padding-top: 2rem;
+  margin-bottom: 2rem;
 
   &::after {
     content: '';
@@ -32,6 +33,8 @@
     font-size: 4.11765rem;
     line-height: 1.2;
     letter-spacing: -0.025em;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
   }
 }
 
