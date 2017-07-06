@@ -13,7 +13,7 @@ This theme is built with the [Fabrica Dev Kit](https://github.com/fabrica-wp/fab
 2. Copy this `setup.yml` to the project root, making whatever changes you like
 3. Run `setup.rb`. This will build a Docker container for a local Wordpress installation.
 
-After installation, replace the contents of `dev/src` with this repo's contents:
+After installation, replace the contents of `dev/` with this repo's contents:
 
 ```
 git init .
