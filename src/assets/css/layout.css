@@ -9,11 +9,16 @@
   position: relative;
   overflow: hidden;
   color: white;
-  background-image: linear-gradient(-225deg, rgba(40,61,129,0.7) 0%, rgba(28,117,188,0.8) 100%), url('../img/blog-hero-banner.jpg');
+  background-image: url('../img/blog-hero-banner.jpg');
   background-position: center;
   background-size: cover;
   padding-top: 2rem;
   margin-bottom: 1rem;
+  &::before {
+    content: '';
+    @mixin cover;
+    background-image: linear-gradient(-225deg, rgba(40,61,129,0.7) 0%, rgba(28,117,188,0.8) 100%);
+  }
 
   &::after {
     content: '';
@@ -26,6 +31,8 @@
 
   &__content {
     @mixin content-width;
+    position: relative;
+    z-index: 1;
     text-shadow: 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.2);
   }
 
@@ -43,6 +50,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
 
   &__menuList {
     list-style: none;
@@ -59,7 +68,7 @@ main {
   @mixin content-width;
 }
 
-div.blog {
+div.teaserList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -68,7 +77,14 @@ div.blog {
 }
 
 .teaser {
+  width: 100%;
   max-width: 33%;
+  @media (max-width: 70rem) {
+    max-width: 50%;
+  }
+  @media (max-width: 50rem) {
+    max-width: none;
+  }
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -82,7 +98,7 @@ div.blog {
     flex-grow: 1;
   }
   &__title {
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     margin-bottom: 0;
     > a:before {
       content: '';

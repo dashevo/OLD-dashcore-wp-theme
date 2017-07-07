@@ -11,7 +11,7 @@
 
 <body class="{{ body_class }}">
 
-  <div block="hero">
+  <div block="hero" style="{% block heroStyle %}{% endblock %}">
     <header block="siteHeader">
       <a elem="logo" href="{{ site.url }}">{{ site.name }}</a>
       <nav elem="menu">
