@@ -13,7 +13,7 @@
   background-position: center;
   background-size: cover;
   padding-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   &::after {
     content: '';
@@ -55,12 +55,49 @@
   }
 }
 
-main > h1 {
+main {
   @mixin content-width;
 }
 
+div.blog {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 -1rem;
+}
+
 .teaser {
-  &__body, &__title {
-    @mixin content-width;
+  max-width: 33%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &:hover {
+    background-color: $color-image-background;
+  }
+
+  &__body {
+    flex-grow: 1;
+  }
+  &__title {
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    > a:before {
+      content: '';
+      @mixin cover;
+      z-index: 1;
+    }
+  }
+  &__date {
+    opacity: 0.5;
+    margin: 0.5rem 0;
+  }
+  &__image {
+    background-size: cover;
+    background-position: center;
+    background-color: $color-image-background;
+    padding-top: 56.25%;
   }
 }

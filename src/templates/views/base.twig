@@ -25,11 +25,13 @@
     </header>
 
     <div elem="content">
-      <h1 elem="title">{{ site.title }}</h1>
-      <p elem="lead">Latest Dash news &amp; information</p>
-      <div elem="buttons">
-        <a href="https://www.dash.org/community/#community-news" class="btn btn--white-solid">Community News</a>
-      </div>
+      <h1 elem="title">{% block title %}{{ site.title }}{% endblock %}</h1>
+      <div elem="lead">{% block lead %}
+        {{ site.description }}
+        <div elem="buttons">
+          <a href="https://www.dash.org/community/#community-news" class="btn btn--white-solid">Community News</a>
+        </div>
+      {% endblock %}</div>
     </div>
   </div>
 

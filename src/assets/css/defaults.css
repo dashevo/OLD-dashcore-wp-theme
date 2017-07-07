@@ -3,13 +3,13 @@
    ========================================================================== */
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 h1,
@@ -25,13 +25,13 @@ dl,
 blockquote,
 figure,
 table {
-	margin: 0 0 1rem 0;
+  margin: 0 0 1rem 0;
 }
 
 ul {
-	padding-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 li {
-	margin: 0 0 0.25rem 0;
+  margin: 0 0 0.25rem 0;
 }

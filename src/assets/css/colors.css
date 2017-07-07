@@ -1,5 +1,6 @@
 $color-black: #131415;
-$color-blue: #1c75bc;
+$color-blue: rgb(28, 117, 188);
 
 $color-text: $color-black;
 $color-link: $color-blue;
+$color-image-background: rgba(28, 117, 188, 0.1);

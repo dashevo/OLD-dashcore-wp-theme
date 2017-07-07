@@ -1,5 +1,8 @@
 {% extends "base.twig" %}
 
+{% block title %}{{ post.title }}{% endblock %}
+{% block lead %}{{ post.date }}{% endblock %}
+
 {% block content %}
   <main>
     <h1>{{ post.title }}</h1>
