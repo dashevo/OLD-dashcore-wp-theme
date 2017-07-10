@@ -15,11 +15,18 @@
     <header block="siteHeader">
       <a elem="logo" href="{{ site.url }}">{{ site.name }}</a>
       <nav elem="menu">
-        <h1 class="hidden">Main menu</h1>
+        <h1 class="hidden">{{ __('Main menu', 'dash-wp-theme')}}</h1>
         <ul elem="menuList">
           {% for item in menus.main.get_items -%}
             <li elem="menuItem" class="{{ item.class }}"><a elem="menuLink" href="{{ item.get_link }}">{{ item.title }}</a></li>
           {% endfor -%}
+          <li elem="menuItem"><a href="https://www.dash.org/get-dash/" class="nav__link">{{ __('Get Dash', 'dash-wp-theme')}}</a></li>
+          <li elem="menuItem"><a href="https://www.dash.org/merchants/" class="nav__link">{{ __('Merchants', 'dash-wp-theme')}}</a></li>
+          <li elem="menuItem"><a href="https://www.dash.org/network/" class="nav__link">{{ __('Network', 'dash-wp-theme')}}</a></li>
+          <li elem="menuItem"><a href="https://www.dash.org/community/" class="nav__link">{{ __('Resources', 'dash-wp-theme')}}</a></li>
+          <li elem="menuItem"><a href="https://www.dash.org/team" class="nav__link">{{ __('Team', 'dash-wp-theme')}}</a></li>
+          <li elem="menuItem"><a href="{{ site.url }}" class="nav__link">{{ __('Blog', 'dash-wp-theme')}}</a></li>
+          <li elem="menuItem"><a href="https://www.dash.org/evolution/" class="nav__link">{{ __('Evolution', 'dash-wp-theme')}}</a></li>
         </ul>
       </nav>
     </header>
@@ -29,7 +36,7 @@
       <div elem="lead">{% block lead %}
         {{ site.description }}
         <div elem="buttons">
-          <a href="https://www.dash.org/community/#community-news" class="btn btn--white-solid">Community News</a>
+          <a href="https://www.dash.org/community/#community-news" class="btn btn--white-solid">{{ __('Community News', 'dash-wp-theme') }}</a>
         </div>
       {% endblock %}</div>
     </div>
