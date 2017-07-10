@@ -34,14 +34,28 @@
     position: relative;
     z-index: 1;
     text-shadow: 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.2);
+    @media (max-width: 1280px) {
+      padding-left: 4rem;
+    }
   }
 
   &__title {
     font-size: 4.11765rem;
+    @media (max-width: 800px) {
+      font-size: 2.5rem;
+    }
     line-height: 1.2;
     letter-spacing: -0.025em;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__lead {
+    font-size: 1.4rem;
+  }
+
+  &__buttons {
+    margin-top: 1rem;
   }
 }
 
@@ -52,6 +66,16 @@
   justify-content: space-between;
   position: relative;
   z-index: 1;
+
+  &__logo {
+    @mixin hidden-text;
+    background-image: url('../img/dash-logo-light.svg');
+    background-size: contain;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    width: 12.5rem;
+    height: 1.8rem;
+  }
 
   &__menuList {
     list-style: none;
