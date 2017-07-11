@@ -1,0 +1,34 @@
+.siteHeader {
+  @mixin content-width;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+
+  &__logo {
+    @mixin hidden-text;
+    background-image: url('../img/dash-logo-light.svg');
+    background-size: contain;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    width: 12.5rem;
+    height: 1.8rem;
+  }
+
+  &__menuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__menuItem {
+    display: inline-block;
+    margin-left: 1rem;
+
+    > a {
+      color: inherit;
+    }
+  }
+}
+

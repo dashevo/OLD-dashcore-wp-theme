@@ -35,3 +35,8 @@ ul {
 li {
   margin: 0 0 0.25rem 0;
 }
+
+main {
+  @mixin content-width;
+}
+
