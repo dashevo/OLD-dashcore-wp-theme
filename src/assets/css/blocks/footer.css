@@ -1,0 +1,56 @@
+.footer {
+  background-color: $color-gray-dark;
+  color: white;
+  padding-top: 4em;
+  padding-bottom: 3em;
+  margin-top: 3rem;
+
+  &__menu, &__legal {
+    color: $color-gray;
+    @mixin content-width;
+    text-align: center;
+    margin-top: 0.8em;
+  }
+
+  &__menu a {
+    display: inline-block;
+    padding: 0 1ch;
+  }
+
+  &__nav {
+    @mixin content-width;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__sectionTitle {
+    color: $color-gray;
+  }
+
+  &__section {
+    flex-basis: 16.66%;
+    @media (max-width: 1200px) {
+      flex-basis: 33.33%;
+    }
+    @media (max-width: 600px) {
+      flex-basis: 50%;
+    }
+    @media (max-width: 390px) {
+      flex-basis: 100%;
+    }
+    float: left;
+    min-width: 16ch;
+
+    > ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}
