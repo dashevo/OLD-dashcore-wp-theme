@@ -14,7 +14,7 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   path = require('path'),
   postcss = require('gulp-postcss'),
-  postcssImport = require('postcss-import'),
+  postcssPartialImport = require('postcss-partial-import'),
   postcssFontpath = require('postcss-fontpath'),
   postcssEach = require('postcss-each'),
   postcssMixins = require('postcss-mixins'),
@@ -114,12 +114,7 @@ var options = {
   uglify: {mangle: false},
   imagemin: {optimizationLevel: 7, progressive: true, interlaced: true, multipass: true},
   postcss: [
-    postcssImport,
-//    stylelint({
-//      "extends": "stylelint-config-standard",
-//      "rules": {
-//      }
-//    }),
+    postcssPartialImport(),
     postcssReporter({clearMessages: true}),
     postcssMixins,
     postcssEach,
