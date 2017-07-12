@@ -32,6 +32,7 @@
     </header>
 
     <div elem="content">
+      {% block breadcrumbs %}{% endblock %}
       <h1 elem="title">{% block title %}{{ site.title }}{% endblock %}</h1>
       <div elem="lead">{% block lead %}
         {{ site.description }}
@@ -47,8 +48,6 @@
   {% endblock -%}
 
   {% include 'footer.twig' %}
-
-  {{ function('wp_footer') }}
 
 </body>
 </html>

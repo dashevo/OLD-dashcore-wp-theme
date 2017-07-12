@@ -6,7 +6,9 @@
   margin: 0 -1rem;
 }
 
-.teaser {
+.teaserList .teaser { /* TODO refactor into proper BEM */
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 33%;
   @media (max-width: 70rem) {
@@ -15,10 +17,11 @@
   @media (max-width: 50rem) {
     max-width: none;
   }
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
+}
+
+.teaser {
   position: relative;
+  padding: 1rem;
 
   &:hover {
     background-color: $color-image-background;

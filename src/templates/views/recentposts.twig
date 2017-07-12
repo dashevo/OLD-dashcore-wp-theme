@@ -1,0 +1,12 @@
+{% for post in posts %}
+  <article block="teaser">
+    {% if thumbnails %}
+      <div elem="image" style="{% if post.thumbnail %}background-image:url({{ post.thumbnail.src }}){% endif %}"></div>
+    {% endif %}
+    <h1 elem="title"><a href="{{ post.link }}">{{ post.title }}</a></h1>
+    <div elem="date">{{ post.date }}</div>
+    <div elem="body">
+      {{ post.get_preview(20, false, "") }}
+    </div>
+  </article>
+{% endfor %}

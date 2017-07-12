@@ -1,11 +1,25 @@
 {% extends "base.twig" %}
 
 {% block title %}{{ post.title }}{% endblock %}
+
 {% block lead %}{{ post.date }}{% endblock %}
+
 {% block heroStyle %}{% if post.thumbnail %}background-image:url({{ post.thumbnail.src }}){% endif %}{% endblock %}
 
+{% block breadcrumbs %}
+  <div block="breadcrumbs">
+    <a elem="link" href="{{ site.url }}">Blog -</a>
+  </div>
+{% endblock %}
+
 {% block content %}
-  <main>
-    {{ post.content }}
+  <main block="post">
+    <article elem="content">
+      {{ post.content }}
+    </article>
+    <aside elem="sidebar">
+      <h2 class="hidden">Recent Posts:</h2>
+      {% include 'recentposts.twig' with {'thumbnails': false} %}
+    </aside>
   </main>
 {% endblock %}

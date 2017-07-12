@@ -1,0 +1,9 @@
+.breadcrumbs {
+  &__link {
+    color: inherit;
+    opacity: 0.75;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

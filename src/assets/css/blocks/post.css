@@ -1,0 +1,23 @@
+.post {
+  display: flex;
+  @media (max-width: 800px) {
+    display: block;
+  }
+
+  &__content {
+    flex-basis: 60ch;
+    flex-shrink: 1;
+    margin-right: auto;
+  }
+
+  &__sidebar {
+    flex-basis: 20em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: 2rem;
+    @media (max-width: 800px) {
+      margin-left: 0;
+      margin-top: 4rem;
+    }
+  }
+}
