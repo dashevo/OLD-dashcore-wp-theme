@@ -1,0 +1,17 @@
+.contentSkip {
+  position: fixed;
+  top: -0.25em;
+  left: 50%;
+  transform: translate3d(-50%, -100%, 0);
+  z-index: 1000;
+  padding: 1.25em 1em 1em;
+  background: white;
+  border-radius: 0.25em;
+  color: $color-blue;
+  transition: transform 0.25s;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.2);
+
+  &:focus {
+    transform: translate3d(-50%, -0.25em, 0);
+  }
+}

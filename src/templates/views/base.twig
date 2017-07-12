@@ -10,7 +10,7 @@
 </head>
 
 <body class="{{ body_class }}">
-
+  <a href="#content" block="contentSkip">Skip to content</a>
   <div block="hero" style="{% block heroStyle %}{% endblock %}">
     <header block="siteHeader">
       <a elem="logo" href="{{ site.url }}">{{ site.name }}</a>
@@ -42,7 +42,7 @@
       {% endblock %}</div>
     </div>
   </div>
-
+  <a id="content"></a>
   {% block content -%}
 
   {% endblock -%}
