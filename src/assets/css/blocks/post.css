@@ -4,6 +4,11 @@
     display: block;
   }
 
+  img {
+    width: 100%;
+    height: auto;
+  }
+
   &__content {
     flex-basis: 60ch;
     flex-shrink: 1;

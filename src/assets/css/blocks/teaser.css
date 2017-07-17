@@ -21,7 +21,7 @@
 
 .teaser {
   position: relative;
-  padding: 1rem;
+  padding: 1.5rem;
 
   &:hover {
     background-color: $color-image-background;
@@ -50,4 +50,3 @@
     padding-top: 56.25%;
   }
 }
-
