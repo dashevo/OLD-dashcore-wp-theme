@@ -20,17 +20,22 @@
           {% for item in menus.main.get_items -%}
             <li elem="menuItem" class="{{ item.class }}"><a elem="menuLink" href="{{ item.get_link }}">{{ item.title }}</a></li>
           {% endfor -%}
-          <li elem="menuItem"><a href="https://www.dash.org/get-dash/">{{ pll__('Get Dash')}}</a></li>
-          <li elem="menuItem"><a href="https://www.dash.org/merchants/">{{ pll__('Merchants')}}</a></li>
-          <li elem="menuItem"><a href="https://www.dash.org/network/">{{ pll__('Network')}}</a></li>
-          <li elem="menuItem"><a href="https://www.dash.org/community/">{{ pll__('Resources')}}</a></li>
-          <li elem="menuItem"><a href="https://www.dash.org/team">{{ pll__('Team')}}</a></li>
-          <li elem="menuItem"><a href="{{ site.url }}">{{ pll__('Blog')}}</a></li>
-          <li elem="menuItem"><a href="https://www.dash.org/evolution/">{{ pll__('Evolution')}}</a></li>
-          <li elem="menuItem">
+          <li elem="menuItem"><a elem="menuLink" href="https://www.dash.org/get-dash/">{{ pll__('Get Dash')}}</a></li>
+          <li elem="menuItem"><a elem="menuLink" href="https://www.dash.org/merchants/">{{ pll__('Merchants')}}</a></li>
+          <li elem="menuItem"><a elem="menuLink" href="https://www.dash.org/network/">{{ pll__('Network')}}</a></li>
+          <li elem="menuItem"><a elem="menuLink" href="https://www.dash.org/community/">{{ pll__('Resources')}}</a></li>
+          <li elem="menuItem"><a elem="menuLink" href="https://www.dash.org/team">{{ pll__('Team')}}</a></li>
+          <li elem="menuItem"><a elem="menuLink" href="{{ site.url }}">{{ pll__('Blog')}}</a></li>
+          <li elem="menuItem"><a elem="menuLink" href="https://www.dash.org/evolution/">{{ pll__('Evolution')}}</a></li>
+          <li elem="menuItem" mods="languages" tabindex="0">
+            {% for lang in pll_the_languages if lang.current_lang %}
+              <span elem="menuLink" mods="language"><img elem="languageFlag" src="{{ lang.flag }}"></span>
+            {% endfor %}
             <ul elem="languageList">
               {% for lang in pll_the_languages %}
-                <li elem="language"><a href="{{ lang.url }}">{{ lang.name }} <img src="{{ lang.flag }}"></a></li>
+                <li elem="language">
+                  <a elem="menuLink" mods="language" href="{{ lang.url }}">{{ lang.name }} <img elem="languageFlag" src="{{ lang.flag }}"></a>
+                </li>
               {% endfor %}
             </ul>
           </li>
