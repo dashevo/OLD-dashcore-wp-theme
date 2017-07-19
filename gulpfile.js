@@ -30,6 +30,7 @@ var gulp = require('gulp'),
   webpackStream = require('webpack-stream'),
   webpack = require('webpack'),
   yaml = require('js-yaml');
+  zip = require('gulp-zip');
 
 // Load project settings
 var packageData;
@@ -94,7 +95,7 @@ var glob = {
   images: base.src + 'assets/img/**/*',
   fonts: base.src + 'assets/fonts/**/*',
   styleMain: base.src + 'assets/css/main.pcss',
-  scriptMain: base.src + 'assets/js/main.js',
+  scriptMain: base.src + 'assets/js/main.js'
 };
 
 // Build folder slugs
@@ -301,6 +302,12 @@ function wpconfig(cb) {
   cb();
 }
 
+function zipTheme() {
+  return gulp.src(base.theme + '**')
+    .pipe(zip(settings.slug + '.zip'))
+    .pipe(gulp.dest(base.dev));
+}
+
 function watch() {
   // Initialise BrowserSync
   console.log('Starting BrowserSync...');
@@ -326,6 +333,9 @@ gulp.task('build', gulp.series(clean, gulp.parallel(header, acf, functions, incl
 
 // Wpconfig: update Docker dynamic ports in Wordpress config
 gulp.task('wpconfig', wpconfig);
+
+// Zip: build a portable theme zip file
+gulp.task('zip', zipTheme);
 
 // Watch: fire build, then watch for changes
 gulp.task('default', gulp.series('build', 'wpconfig', watch));

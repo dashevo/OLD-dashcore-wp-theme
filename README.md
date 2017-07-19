@@ -29,6 +29,11 @@ git reset --hard origin/master
 3. Launch the site using the URL shown in the console, probably http://localhost:3000/.
 4. To shut down Docker: `docker-compose down` from `dev` directory.
 
+### Other commands
+
+Build the site: `gulp build`
+Zip up the built site into a theme zip in the Dev folder: `gulp zip`
+
 ## Reference Links
 
 Timber Documentation for Twig templates: http://timber.github.io/timber/#timber-post
