@@ -13,8 +13,8 @@
     background-size: contain;
     background-position: 0% 50%;
     background-repeat: no-repeat;
-    width: 12.5rem;
-    height: 1.8rem;
+    width: 180px;
+    height: 90px;
   }
 
   &__menuList {
@@ -26,7 +26,6 @@
   &__menuItem {
     position: relative;
     display: inline-block;
-    margin: 0 0 0 1rem;
 
     &--languages {
       &:hover, &:focus, &:focus-within {
@@ -40,15 +39,18 @@
 
   &__menuLink {
     display: block;
-    padding: 0.5em 0;
+    padding: 0 12px;
     color: inherit;
     white-space: nowrap;
+    line-height: 90px;
 
     &--language {
       display: block;
       padding: 0.25em 0;
       min-width: 3ch;
       text-align: right;
+      line-height: 1.5;
+      margin-left: 25px;
     }
   }
 
