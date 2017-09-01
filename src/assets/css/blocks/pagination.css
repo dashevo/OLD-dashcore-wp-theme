@@ -1,0 +1,6 @@
+.pagination {
+  margin-top: 1rem;
+  .btn {
+    margin: 0;
+  }
+}

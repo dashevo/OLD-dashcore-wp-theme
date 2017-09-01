@@ -14,5 +14,19 @@
         </article>
       {% endfor %}
     </div>
+    {% if posts.pagination and posts.pagination.total > 1 %}
+      <!-- Prev 1 ... 4 5 [6] 7 8 ... 22 Next -->
+      <nav class="pagination">Pages:
+        {% for page in posts.pagination.pages %}
+          {% if page.current %}
+            <span class="btn">{{ page.title }}</span>
+          {% elseif page.link %}
+            <a class="btn btn--white-solid" href="{{ page.link }}">{{ page.title }}</a>
+          {% else %}
+            <span class="pagination__ellipsis">{{ page.title }}</span>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    {% endif %}
   </main>
 {% endblock %}
