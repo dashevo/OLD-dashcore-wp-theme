@@ -4,7 +4,7 @@
 
 {% block lead %}{{ post.date }}{% endblock %}
 
-{% block heroStyle %}{% if post.thumbnail %}background-image:url({{ post.thumbnail.src }}){% endif %}{% endblock %}
+{% block heroStyle %}{% if post.thumbnail %}background-image:url({{ post.thumbnail.src|tojpg|resize(800) }}){% endif %}{% endblock %}
 
 {% block breadcrumbs %}
   <div block="breadcrumbs">
